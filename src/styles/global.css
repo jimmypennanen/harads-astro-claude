@@ -14,12 +14,13 @@
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-
 @theme {
   --color-beige: #ede8e8;
   --color-creme: #f8f6f6;
   --color-forest: #778c72;
   --color-forest-light: #cbd7c9;
+  --color-bright-brown: #847949;
+  --color-gold: #D8C076;
 
   --font-serif: "Cormorant Garamond", serif;
 }

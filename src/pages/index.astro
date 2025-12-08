@@ -15,71 +15,48 @@ import ImageBanner from "../components/ImageBanner.astro";
   <!-------- Inventory -------->
   <section class="bg-white py-20 px-6">
     <div
-      class="flex flex-col md:flex-row justify-center items-center gap-20 max-w-[90%] mx-auto"
-    >
+      class="flex flex-col md:flex-row justify-center items-center gap-20 max-w-[90%] mx-auto">
+
       <div class="text-center">
-        <img
-          src="/images/pennanen.jpeg"
-          alt="Jimmy"
-          class="w-30 h-30 object-cover rounded-full mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold uppercase">Björn</h3>
+        <img src="/images/pennanen.jpeg" alt="Jimmy" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold uppercase"> Häst </h3>
       </div>
 
       <div class="text-center">
-        <img
-          src="/images/pabben.jpeg"
-          alt="Partner"
-          class="w-30 h-30 object-cover rounded-full mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold uppercase">Fågel</h3>
+        <img src="/images/pabben.jpeg" alt="Partner" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold uppercase"> Fågel </h3>
       </div>
 
       <div class="text-center">
-        <img
-          src="/images/snot.jpeg"
-          alt="Partner"
-          class="w-30 h-30 object-cover rounded-full mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold uppercase">Kanin</h3>
+        <img src="/images/snot.jpeg" alt="Partner" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold upperca"> Kanin </h3>
       </div>
 
       <div class="text-center">
-        <img
-          src="/images/ponker.jpeg"
-          alt="Partner"
-          class="w-30 h-30 object-cover rounded-full mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold uppercase">Rådjur</h3>
+        <img src="/images/ponker.jpeg" alt="Partner" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold uppercase"> Rådjur </h3>
       </div>
 
       <div class="text-center">
-        <img
-          src="/images/snot.jpeg"
-          alt="Partner"
-          class="w-30 h-30 object-cover rounded-full mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold uppercase">Hund</h3>
+        <img src="/images/snot.jpeg" alt="Partner" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold uppercase"> Hund </h3>
       </div>
 
       <div class="text-center">
-        <img
-          src="/images/pabben.jpeg"
-          alt="Partner"
-          class="w-30 h-30 object-cover rounded-full mx-auto mb-4"
-        />
-        <h3 class="text-xl font-semibold uppercase">Räv</h3>
+        <img src="/images/pabben.jpeg" alt="Partner" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+        <h3 class="text-xl font-semibold uppercase"> Katt </h3>
       </div>
+
     </div>
   </section>
 
   <!-------- Text banner -------->
   <section class="bg-white py-8 px-6">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-amber-400">
+      <h2 class="text-3xl md:text-4xl font-bold text-forest uppercase">
         Vi hjälper dig att hitta rätt foder till ditt djur
       </h2>
-      <p class="mt-4 text-xl text-amber-300 max-w-2xl mx-auto">
+      <p class="mt-4 text-xl max-w-2xl mx-auto font-thin text-forest">
         Vi har ett stort utval av foder och leverantörer för att du ska hitta
         exakt det som passar ditt djur bäst, beställ online eller besök våran
         mysiga gårdsbutik Gläntan. Vi ses där lugnet möter naturen.
@@ -88,106 +65,84 @@ import ImageBanner from "../components/ImageBanner.astro";
   </section>
 
   <!-------- Products -------->
-  <section class="py-16 bg-white text-[#847949]">
+  <section class="py-16 bg-white text-bright-brown]">
     <div class="max-w-6xl mx-auto px-6">
+
       <div class="grid md:grid-cols-4 gap-8">
+
         <!-------- Button one -------->
-        <div class="rounded-lg box-shadow transition">
-          <div class="p-6 bg-[#FAF1DE]">
-            <img
-              src="/images/ponker.jpeg"
-              alt="shop"
-              class="w-60 h-40 object-cover mx-auto mb-4"
-            />
+        <div class="rounded-lg box-shadow">
+
+          <div class="p-6 bg-forest-light"> <!--- The image --->
+            <img src="/images/ponker.jpeg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
           </div>
-          <div class="p-6 bg-white">
-            <h3 class="text-xl font-semibold mb-2 uppercase">Valp</h3>
-            <p class="mb-4">Small breed 15kg</p>
-            <a
-              href="/kontakt"
-              class="inline-block bg-[#FAF1DE] text-amber-400 font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition"
-            >
-              Köp
-            </a>
+
+          <div class="p-6"> <!--- The text --->
+            <h3 class="text-xl font-semibold mb-2 uppercase"> Valp </h3>
+            <p class="mb-4"> Small breed 15kg </p>
+
+            <!--- Button --->
+            <a href="/kontakt" class="inline-block bg-forest text-white font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition uppercase"> Köp </a>
           </div>
+
         </div>
 
         <!-------- Button two -------->
-        <div class="box-shadow">
-          <div class="rounded-lg">
-            <div class="p-6 bg-[#FAF1DE]"> <!--- Image on the button --->
-              <img
-                src="/images/snot.jpeg"
-                alt="shop"
-                class="w-60 h-40 object-cover mx-auto mb-4"
-              />
-            </div>
+        <div class="rounded-lg box-shadow">
 
-            <div class="p-6 bg-white"> <!--- Text above the form --->
-              <h3 class="text-xl font-semibold mb-2 uppercase">Vuxen</h3>
-              <p class="mb-4">Adult breed 22kg</p>
-
-              <!--- Link on the button --->
-              <a
-                href="/kontakt"
-                class="inline-block bg-[#FAF1DE] text-amber-400 font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition"
-              >
-                Köp
-              </a>
-            </div>
+          <div class="p-6 bg-[#FAF1DE]"> <!--- Image --->
+            <img src="/images/snot.jpeg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
           </div>
+
+          <div class="p-6 bg-white"> <!--- Text --->
+            <h3 class="text-xl font-semibold mb-2 uppercase"> Vuxen </h3>
+            <p class="mb-4"> Adult breed 22kg </p>
+
+            <!--- Button --->
+            <a href="/kontakt" class="inline-block bg-[#FAF1DE] text-amber-400 font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition uppercase"> Köp </a>
+          </div>
+
         </div>
 
         <!-------- Button three -------->
         <div class="rounded-lg box-shadow">
-          <div class="p-6 bg-[#FAF1DE]">
-            <img
-              src="/images/ponker.jpeg"
-              alt="shop"
-              class="w-60 h-40 object-cover mx-auto mb-4"
-            />
+
+          <div class="p-6 bg-[#FAF1DE]"> <!--- Image --->
+            <img src="/images/ponker.jpeg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
           </div>
-          <div class="p-6 bg-white">
-            <h3 class="text-xl font-semibold mb-2 uppercase">Allergisk</h3>
-            <p class="mb-4">Alergic breed 10kg</p>
-            <a
-              href="/kontakt"
-              class="inline-block bg-[#FAF1DE] text-amber-400 font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition"
-            >
-              Köp
-            </a>
+
+          <div class="p-6 bg-white"> <!--- Text --->
+            <h3 class="text-xl font-semibold mb-2 uppercase"> Allergisk </h3>
+            <p class="mb-4"> Alergic breed 10kg </p>
+
+            <!--- Button --->
+            <a href="/kontakt" class="inline-block bg-[#FAF1DE] text-amber-400 font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition uppercase"> Köp </a>
           </div>
+
         </div>
 
         <!-------- Button four -------->
         <div class="rounded-lg box-shadow">
-          <div class="p-6 bg-[#FAF1DE]">
-            <img
-              src="/images/snot.jpeg"
-              alt="shop"
-              class="w-60 h-40 object-cover mx-auto mb-4"
-            />
+
+          <div class="p-6 bg-[#FAF1DE]"> <!--- Image --->
+            <img src="/images/snot.jpeg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
           </div>
-          <div class="p-6 bg-white">
-            <h3 class="text-xl font-semibold mb-2">VEGANSK</h3>
-            <p class="mb-4">Vegan breed 8kg</p>
-            <a
-              href="/kontakt"
-              class="inline-block bg-[#FAF1DE] text-amber-400 font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition"
-            >
-              Köp
-            </a>
+
+          <div class="p-6 bg-white"> <!--- Text --->
+            <h3 class="text-xl font-semibold mb-2 uppercase"> Vegansk </h3>
+            <p class="mb-4"> Vegan breed 8kg </p>
+
+            <!--- Button --->
+            <a href="/kontakt" class="inline-block bg-[#FAF1DE] text-amber-400 font-semibold px-20 py-2 rounded-lg hover:bg-gray-100 transition uppercase"> Köp </a>
           </div>
+
         </div>
+
       </div>
 
-      <!-------- Button to all -------->
-      <a
-        href="/shop"
-        class="inline-block mt-15 ml-3 uppercase text-amber-400 hover:underline"
-      >
-        Våra erbjudanden →</a
-      >
+      <!-------- Button to shop -------->
+      <a href="/shop" class="inline-block mt-15 ml-3 uppercase text-forest hover:border-b-1"> Våra erbjudanden → </a>
+
     </div>
   </section>
 
@@ -195,16 +150,11 @@ import ImageBanner from "../components/ImageBanner.astro";
   <section
     class="py-16 bg-[#FAF1DE] text-[#847949] text-center max-w-[90%] mx-auto mb-16"
   >
-    <h2 class="text-3xl font-bold mb-4 uppercase">Redo att ta nästa steg?</h2>
-    <p class="mb-6 text-xl">Beställ online eller besök våran gårdsbutik</p>
+    <h2 class="text-3xl font-bold mb-4 uppercase"> Redo att ta nästa steg? </h2>
+    <p class="mb-6 text-xl uppercase font-thin"> Beställ online eller besök våran gårdsbutik </p>
 
     <!-------- Button -------->
-    <a
-      href="/kontakt"
-      class="inline-block bg-white text-amber-400 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition uppercase"
-    >
-      Kontakta oss
-    </a>
+    <a href="/kontakt" class="inline-block bg-white text-amber-400 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition uppercase"> Kontakta oss </a>
 
   </section>
 
