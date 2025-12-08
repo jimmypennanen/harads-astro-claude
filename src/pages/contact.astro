@@ -14,14 +14,13 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
 <!------------------------------- Contact us ------------------------------->
 <section class="py-12">
 
-  <!-------- Text above the form -------->
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-6xl mx-auto px-6"> <!--- Text above the form --->
     <h2 class="font-bold text-lg uppercase mb-8 pl-30 pt-8">
       Skicka ett mail
     </h2>
 
     <!-------- This is the form -------->
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-10"> <!--- Name input area --->
       <div class="lg:col-span-3">
         <form class="px-30 pt-3 bg-white/0">
           <div class="relative z-0 mb-6">
@@ -29,12 +28,12 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
             <label for="name" class="px-2 peer-focus:px-0 peer-focus:font-medium absolute text-md duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7"> Namn </label>
           </div>
 
-          <div class="relative z-0 mb-6">
+          <div class="relative z-0 mb-6"> <!--- Email input area --->
             <input type="email" name="email" id="email" class="block py-2.5 px-0 w-full text-sm bg-creme border-transparent border-2 appearance-none focus:outline-none focus:ring-0 focus:border-beige peer" placeholder=" " required/>
             <label for="email" class="px-2 peer-focus:px-0 peer-focus:font-medium absolute text-md duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7"> E-post </label>
           </div>
 
-          <div class="relative mt-12">
+          <div class="relative mt-12"> <!--- Message area --->
             <textarea  name="message" id="message" class="block py-2.5 px-0 w-full text-sm bg-creme border-2 border-transparent appearance-none focus:outline-none focus:ring-0 focus:border-beige peer" placeholder=" " required  rows="12"></textarea>
             <label for="messsage" class="-top-[1.4rem] peer-focus:font-medium absolute text-md duration-300 transform -translate-y-6 scale-75  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75"> Meddelande </label>
 
