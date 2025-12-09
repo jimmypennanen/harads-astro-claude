@@ -8,24 +8,20 @@ const {
 ---
 
 <section class="relative bg-gray-100 py-24 px-6 mx-auto">
-  <!-------- Background image -------->
-  <div
-    class="absolute inset-0 z-0 bg-cover bg-center opacity-45 bg-position-[center_top_10%] bg-no-repeat"
-    style={`background-image: url('${backgroundImage}')`}
-  >
-  </div>
+
+  <div class="absolute inset-0 z-0 bg-cover bg-center opacity-45 bg-position-[center_top_10%] bg-no-repeat" style={`background-image: url('${backgroundImage}')`}> </div> <!-------- Background image -------->
 
   <!-------- Image text -------->
   <div class="relative z-10 w-[25%] text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 uppercase">
+    <h1 class="text-4xl md:text-5xl font-bold text-olive uppercase">
       {title}
     </h1>
-    <p class="mt-4 text-xl text-gray-800 font-bold">
+    <p class="mt-4 text-xl text-black font-thin">
       {text}
     </p>
     <a
       href="/kontakt"
-      class="uppercase mt-6 inline-block bg-white text-amber-400 hover:bg-gray-100 px-6 py-3 rounded-lg transition"
+      class="uppercase mt-6 inline-block bg-olive text-white hover:bg-brown-beige px-6 py-3 rounded-lg transition"
     >
       {buttonText}
     </a>
