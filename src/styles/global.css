@@ -24,10 +24,11 @@
 
 @theme {
   --color-beige: #ede8e8;
-  --color-creme: #f8f6f6;
+  --color-brown-beige: #cbbdbd;
+  --color-brown: #574444;
+  --color-champagne: #f8f6f6;
   --color-forest: #778c72;
   --color-olive: #847949;
-  --color-beige-1: #FAF1DE;
 
   --font-serif: "Cormorant Garamond", serif;
 }

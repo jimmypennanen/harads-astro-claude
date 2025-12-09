@@ -10,7 +10,7 @@ const {
 <section class="relative bg-gray-100 py-24 px-6 max-w-[90%] mx-auto mt-16">
   <!-------- Background image -------->
   <div
-    class="absolute inset-0 z-0 bg-cover bg-center opacity-45"
+    class="absolute inset-0 z-0 bg-cover bg-center opacity-40"
     style={`background-image: url('${backgroundImage}')`}
   >
   </div>
@@ -19,12 +19,12 @@ const {
     <h1 class="text-5xl font-bold text-olive"> <!--- Image text --->
       {title}
     </h1>
-    <p class="mt-4 text-xl uppercase"> <!--- Image paragraph --->
+    <p class="mt-4 text-xl uppercase font-thin text-black"> <!--- Image paragraph --->
       {text}
     </p>
  
     <!-------- Button--------> 
-    <a href="/kontakt" class="mt-6 inline-block uppercase bg-white text-bright-brown px-6 py-3 rounded-lg hover:bg-olive hover:text-white transition">
+    <a href="/kontakt" class="mt-6 inline-block uppercase bg-olive text-white px-6 py-3 rounded-lg hover:bg-brown-beige transition">
       {buttonText}
     </a>
 
