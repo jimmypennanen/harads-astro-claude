@@ -5,13 +5,11 @@ const {
   backgroundImage = "/images/hero-image.jpg",
 } = Astro.props;
 ---
-
+<!------------------------------- Image banner ------------------------------->
 <section class="relative bg-gray-100 py-35 px-6 max-w-[90%] mx-auto mt-16">
+  
   <!-------- Background image -------->
-  <div
-    class="absolute inset-0 z-0 bg-cover bg-center opacity-40"
-    style={`background-image: url('${backgroundImage}')`}
-  >
+  <div class="absolute inset-0 z-0 bg-cover bg-center opacity-40" style={`background-image: url('${backgroundImage}')`} >
   </div>
 
   <div class="relative z-10 max-w-4xl mx-auto text-center">
@@ -24,3 +22,4 @@ const {
 
   </div>
 </section>
+

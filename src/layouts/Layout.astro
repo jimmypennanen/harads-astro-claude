@@ -33,30 +33,42 @@ import '../styles/global.css'; // Importera globala stilar
   </body>
 </html>
 
-    <!------ Header sticky -->
+<!------------------------------- Header sticky ------------------------------->
     <script is:inline>
   if (typeof window !== "undefined") {
     const header = document.getElementById("site-header");
+    const logo = document.getElementById("site-logo");
 
     const onScroll = () => {
       const scrolled = window.scrollY > 120; // höjd där det ska krympa
 
-      if (!header) return;
+      if (!header || !logo) return;
 
       if (scrolled) {
         // LITEN HEADER
         header.classList.remove("h-[50vh]");
         header.classList.add("h-20", "bg-champagne/90", "shadow-md");
+
+        // LITEN LOGGA
+        logo.classList.remove("h-60");
+        logo.classList.add("h-24");
       } else {
         // STOR HEADER
         header.classList.add("h-[50vh]");
         header.classList.remove("h-20");
         // om du vill att den ska vara mer transparent i toppen:
         // header.classList.remove("bg-champagne/90");
+
+        // STOR LOGGA
+        logo.classList.add("h-60");
+        logo.classList.remove("h-24");
       }
     };
 
     window.addEventListener("scroll", onScroll);
     onScroll(); // kör en gång vid load
   }
-    </script>
+</script>
+
+
+    
