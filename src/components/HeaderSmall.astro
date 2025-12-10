@@ -9,14 +9,14 @@ const links2 = [
 ];
 ---
 <!------------------------------- Header small ------------------------------->
-<header class="h-25 sticky top-0 z-50 bg-champagne p-10 flex items-center justify-center gap-20 shadow-md">
+<header class="h-21 sticky top-0 z-50 bg-champagne p-10 flex items-center justify-center gap-18 shadow-md">
   
   <!-------- Navigation part 1-------->
   <nav class="space-x-6 uppercase">
     {links1.map(link => (
       <a 
         href={link.href} 
-        class="text-olive text-lg hover:text-brown-beige transition font-medium"
+        class="text-olive text-lg hover:text-brown-beige transition"
       >
         {link.name}
       </a>
@@ -33,7 +33,7 @@ const links2 = [
     {links2.map(link => (
       <a 
         href={link.href} 
-        class="text-olive text-lg hover:text-brown-beige transition font-medium"
+        class="text-olive text-lg hover:text-brown-beige transition"
       >
         {link.name}
       </a>
