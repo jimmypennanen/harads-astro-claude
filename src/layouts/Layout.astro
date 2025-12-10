@@ -37,6 +37,7 @@ import '../styles/global.css'; // Importera globala stilar
     <script is:inline>
   if (typeof window !== "undefined") {
     const header = document.getElementById("site-header");
+    const links = document.querySelectorAll(".nav-link");
     const logo = document.getElementById("site-logo");
 
     const onScroll = () => {
@@ -49,6 +50,12 @@ import '../styles/global.css'; // Importera globala stilar
         header.classList.remove("h-[50vh]");
         header.classList.add("h-21", "bg-champagne/90", "shadow-md");
 
+        // Krympa text
+        links.forEach(link => {
+          link.classList.remove("text-2xl");
+          link.classList.add("text-lg");
+        });
+
         // LITEN LOGGA
         logo.classList.remove("h-60");
         logo.classList.add("h-18");
@@ -58,6 +65,12 @@ import '../styles/global.css'; // Importera globala stilar
         header.classList.remove("h-20");
         // om du vill att den ska vara mer transparent i toppen:
         // header.classList.remove("bg-champagne/90");
+
+        // Återställ text
+        links.forEach(link => {
+          link.classList.add("text-2xl");
+          link.classList.remove("text-lg");
+        });
 
         // STOR LOGGA
         logo.classList.add("h-60");

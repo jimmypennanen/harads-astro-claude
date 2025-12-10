@@ -10,12 +10,12 @@ const links2 = [
 ---
 
 <!------------------------------- Header ------------------------------->
-<header id="site-header" class="sticky top-0 w-full h-[50vh] bg-champagne/70 text-center flex items-center justify-center gap-20 shadow-md transition-all duration-300 z-50 backdrop-blur-sm">
+<header id="site-header" class="sticky top-0 w-full h-[50vh] bg-champagne/70 text-center flex items-center justify-center gap-18 shadow-md transition-all duration-300 z-50 backdrop-blur-sm">
   
   <!-------- Navigation part one -------->
   <nav class="space-x-6 w-56 uppercase">
     {links1.map(link => (
-      <a  href={link.href} class="text-olive text-2xl hover:text-brown-beige transition">
+      <a  href={link.href} class="nav-link text-olive text-2xl hover:text-brown-beige transition">
         {link.name}
       </a>
     ))}
@@ -29,7 +29,7 @@ const links2 = [
   <!-------- Navigation part two -------->
   <nav class="space-x-6 w-56 uppercase">
     {links2.map(link => (
-      <a  href={link.href} class="text-olive text-2xl hover:text-brown-beige transition">
+      <a  href={link.href} class="nav-link text-olive text-2xl hover:text-brown-beige transition">
         {link.name}
       </a>
     ))}
