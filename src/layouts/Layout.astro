@@ -33,55 +33,65 @@ import '../styles/global.css'; // Importera globala stilar
   </body>
 </html>
 
-<!------------------------------- Header sticky ------------------------------->
+<!------------------------------- Header sticky animation with throttling and CSS transforms ------------------------------->
     <script is:inline>
   if (typeof window !== "undefined") {
     const header = document.getElementById("site-header");
-    const links = document.querySelectorAll(".nav-link");
     const logo = document.getElementById("site-logo");
 
+    if (!header || !logo) return;
+
+    let ticking = false;
+    let isScrolled = false;
+    const SCROLL_THRESHOLD = 120;
+
+    // Add inline styles for smooth transitions
+    header.style.transition = "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
+    logo.style.transition = "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
+
+    const updateHeader = () => {
+      const scrolled = window.scrollY > SCROLL_THRESHOLD;
+
+      if (scrolled !== isScrolled) {
+        isScrolled = scrolled;
+
+        if (scrolled) {
+          // Scroll DOWN - make header smaller
+          header.setAttribute("data-scrolled", "true");
+          logo.style.transform = "scale(0.5)";
+        } else {
+          // Scroll UP - make header larger
+          header.removeAttribute("data-scrolled");
+          logo.style.transform = "scale(1)";
+        }
+      }
+
+      ticking = false;
+    };
+
     const onScroll = () => {
-      const scrolled = window.scrollY > 120; // höjd där det ska krympa
-
-      if (!header || !logo) return;
-
-      if (scrolled) {
-        // LITEN HEADER
-        header.classList.remove("h-[50vh]");
-        header.classList.add("h-21", "bg-champagne/90", "shadow-md");
-
-        // Krympa text
-        links.forEach(link => {
-          link.classList.remove("text-2xl");
-          link.classList.add("text-lg");
-        });
-
-        // LITEN LOGGA
-        logo.classList.remove("h-60");
-        logo.classList.add("h-18");
-      } else {
-        // STOR HEADER
-        header.classList.add("h-[50vh]");
-        header.classList.remove("h-20");
-        // om du vill att den ska vara mer transparent i toppen:
-        // header.classList.remove("bg-champagne/90");
-
-        // Återställ text
-        links.forEach(link => {
-          link.classList.add("text-2xl");
-          link.classList.remove("text-lg");
-        });
-
-        // STOR LOGGA
-        logo.classList.add("h-60");
-        logo.classList.remove("h-24");
+      if (!ticking) {
+        window.requestAnimationFrame(updateHeader);
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", onScroll);
-    onScroll(); // kör en gång vid load
+    window.addEventListener("scroll", onScroll, { passive: true });
+    updateHeader(); // Run once at load
   }
 </script>
+
+<style is:global>
+  #site-header[data-scrolled="true"] {
+    height: 5rem;
+    background-color: rgba(248, 246, 246, 0.9);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  #site-header {
+    height: 50vh;
+  }
+</style>
 
 
     
