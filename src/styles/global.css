@@ -24,10 +24,12 @@
 
 #site-header.scrolled {
   height: 5rem !important;
+  background-color: rgba(248, 246, 246, 0.95) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
 }
 
 #site-header.scrolled #site-logo {
-  height: 5rem !important;
+  height: 2.5rem !important;
 }
 
 @theme {

@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import ImageBannerWide from '../components/ImageBannerWide.astro';
 ---
 
-<Layout title="Kontakta Gläntan - Vi Hjälper Gärna" description="Kontakta Gläntan gårdsbutik för frågor om djurfoder eller för att boka ett besök. Vi finns i Harads och är glada att hjälpa dig." ogImage="/images/contact-hero.jpg">
+<Layout title="Kontakta Gläntan Gårdsbutik i Harads" description="Kontakta Gläntan för frågor om djurfoder, personlig rådgivning eller besök. Gårdsbutik i Harads med högt kvalitativt sortiment och vänlig service." ogImage="/images/contact-hero.jpg">
 
   <ImageBannerWide 
   title="Kontakt" 
@@ -15,14 +15,15 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
 <section class="py-12">
 
   <div class="max-w-6xl mx-auto px-6"> <!--- Text above the form --->
-    <h2 class="font-bold text-lg uppercase mb-8 pl-4 md:pl-12 lg:pl-30 pt-8">
+    <h2 class="font-bold text-lg uppercase mb-8 pl-4 md:pl-8 lg:pl-12 pt-8">
       Skicka ett mail
     </h2>
 
     <!-------- Form -------->
+    <!-- NOTE: Form action is a placeholder. Replace with actual form service (Formspree, Netlify Forms, etc.) when ready. -->
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-10"> <!--- Name input area --->
       <div class="lg:col-span-3">
-        <form class="px-4 md:px-12 lg:px-30 pt-3 bg-white/0" action="https://formspree.io/f/xvggozzp" method="POST">
+        <form class="px-4 md:px-8 lg:px-12 pt-3 bg-white/0" action="#" method="POST">
           <div class="relative z-0 mb-6">
             <input type="text" name="name" id="name" class="block py-2.5 px-0 w-full text-sm bg-champagne border-transparent border-2 appearance-none focus:outline-none focus:ring-0 focus:border-beige peer" placeholder=" " required />
             <label for="name" class="px-2 peer-focus:px-0 peer-focus:font-medium absolute text-md duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7"> Namn </label>
@@ -47,14 +48,15 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
       <div class="uppercase pl-0 pt-3 lg:pl-2">
         <div class="p-5 pt-0">
           <h3 class="font-heading text-md font-bold"> Kontakt: </h3>
-          <a href="mailto:maalinlarsson@hotmail.com" class="block normal-case"> hello@glantan.com</a>
-          <a href="tel:004746415105" class="block normal-case"> 0123456789 </a>
+          <!-- NOTE: Email and phone are placeholders. Replace with actual contact information when available. -->
+          <a href="mailto:info@glantan.com" class="block normal-case"> info@glantan.com</a>
+          <a href="tel:+4670123456" class="block normal-case"> 070-123 45 67 </a>
         </div>
 
         <div class="p-5">
           <h3 class="font-bold font-heading text-md"> Adress: </h3>
-          <p class="font-thin normal-case"> Gläntan 1 </p>
-          <p class="font-thin normal-case" >Harads </p>
+          <p class="font-thin normal-case"> Gläntan 123 </p>
+          <p class="font-thin normal-case" >960 24 Harads </p>
         </div>
       </div>
     </div>

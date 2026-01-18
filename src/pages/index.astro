@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import ImageBanner from "../components/ImageBanner.astro";
 ---
 
-<Layout headerType="large" title="Gläntan - Lokal Gårdsbutik för Djurfoder" description="Gläntan är en familjeägd gårdsbutik i Harads med ett stort sortiment av högkvalitativt djurfoder för hundar, katter, hästar, höns och andra djur." ogImage="/images/logo-round.png">
+<Layout headerType="large" title="Gläntan - Gårdsbutik i Harads | Djurfoder & Tillbehör" description="Familjeägd gårdsbutik i Harads. Högt kvalitativt djurfoder för hund, katt, häst, höns, kanin, marsvin, vilt och vildfåglar. Besök oss eller handla online." ogImage="/images/logo-round.png">
 <!------------------------------- Image banner ------------------------------->
   <ImageBanner
     title="Gläntans djur och natur"
@@ -12,63 +12,103 @@ import ImageBanner from "../components/ImageBanner.astro";
     backgroundImage="/images/hero-image.jpg"
   />
 
-  <!-------- Animal banner *section -------->
-  <section class=" py-20 px-6">
-    <div
-      class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 lg:gap-20 max-w-[90%] mx-auto">
+  <!-------- Animal categories section -------->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold text-center uppercase text-olive mb-12">
+        Foder för alla djurslag
+      </h2>
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
 
-      <a href="https://glantanshop.myshopify.com" target="_blank" class="">
-        <div class="text-center">
-          <img src="/images/horses.jpg" alt="horse" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
-          <h3 class="text-xl font-semibold uppercase text-olive"> Häst </h3>
-        </div>
-      </a>
+        <!-- Hund -->
+        <a href="/shop" class="group">
+          <div class="text-center">
+            <div class="relative overflow-hidden rounded-full mb-4">
+              <img src="/images/dog.jpg" alt="Hundfoder" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto group-hover:scale-110 transition-transform duration-300"/>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold uppercase text-olive"> Hund </h3>
+            <p class="text-sm text-brown mt-1"> Torrfoder • Godis </p>
+          </div>
+        </a>
 
-      <a href="https://glantanshop.myshopify.com" target="_blank" class="">
-        <div class="text-center">
-          <img src="/images/birds.jpg" alt="bird" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
-          <h3 class="text-xl font-semibold uppercase text-olive"> Fågel </h3>
-        </div>
-      </a>
+        <!-- Katt -->
+        <a href="/shop" class="group">
+          <div class="text-center">
+            <div class="relative overflow-hidden rounded-full mb-4">
+              <img src="/images/cat.jpg" alt="Kattfoder" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto group-hover:scale-110 transition-transform duration-300"/>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold uppercase text-olive"> Katt </h3>
+            <p class="text-sm text-brown mt-1"> Torrfoder • Godis </p>
+          </div>
+        </a>
 
-      <a href="https://glantanshop.myshopify.com" target="_blank" class="">
-        <div class="text-center">
-          <img src="/images/bunny.jpg" alt="bunny" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
-          <h3 class="text-xl font-semibold uppercase text-olive"> Kanin </h3>
-        </div>
-      </a>
+        <!-- Häst -->
+        <a href="/shop" class="group">
+          <div class="text-center">
+            <div class="relative overflow-hidden rounded-full mb-4">
+              <img src="/images/horses.jpg" alt="Hästfoder" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto group-hover:scale-110 transition-transform duration-300"/>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold uppercase text-olive"> Häst </h3>
+            <p class="text-sm text-brown mt-1"> Havre • Hö </p>
+          </div>
+        </a>
 
-      <a href="https://glantanshop.myshopify.com" target="_blank" class="">
-        <div class="text-center">
-          <img src="/images/deer.jpg" alt="deer" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
-          <h3 class="text-xl font-semibold uppercase text-olive"> Rådjur </h3>
-        </div>
-      </a>
+        <!-- Höns -->
+        <a href="/shop" class="group">
+          <div class="text-center">
+            <div class="relative overflow-hidden rounded-full mb-4">
+              <img src="/images/chickens.jpg" alt="Hönsfoder" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto group-hover:scale-110 transition-transform duration-300"/>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold uppercase text-olive"> Höns </h3>
+            <p class="text-sm text-brown mt-1"> Foder • Tillbehör </p>
+          </div>
+        </a>
 
-      <a href="https://glantanshop.myshopify.com" target="_blank" class="">
-        <div class="text-center">
-          <img src="/images/dog.jpg" alt="dog" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
-          <h3 class="text-xl font-semibold uppercase text-olive"> Hund </h3>
-        </div>
-      </a>
+        <!-- Kanin & Marsvin -->
+        <a href="/shop" class="group">
+          <div class="text-center">
+            <div class="relative overflow-hidden rounded-full mb-4">
+              <img src="/images/bunny.jpg" alt="Kanin & Marsvin" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto group-hover:scale-110 transition-transform duration-300"/>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold uppercase text-olive"> Kanin & Marsvin </h3>
+            <p class="text-sm text-brown mt-1"> Hö • Godis </p>
+          </div>
+        </a>
 
-      <a href="https://glantanshop.myshopify.com" target="_blank" class="">
-        <div class="text-center">
-          <img src="/images/cat.jpg" alt="cat" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
-          <h3 class="text-xl font-semibold uppercase text-olive"> Katt </h3>
-        </div>
-      </a>
+        <!-- Vilt -->
+        <a href="/shop" class="group">
+          <div class="text-center">
+            <div class="relative overflow-hidden rounded-full mb-4">
+              <img src="/images/deer.jpg" alt="Vildfoder" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto group-hover:scale-110 transition-transform duration-300"/>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold uppercase text-olive"> Vilt </h3>
+            <p class="text-sm text-brown mt-1"> Foder • Salt </p>
+          </div>
+        </a>
 
+        <!-- Vildfåglar -->
+        <a href="/shop" class="group">
+          <div class="text-center">
+            <div class="relative overflow-hidden rounded-full mb-4">
+              <img src="/images/birds.jpg" alt="Vildfågelfoder" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto group-hover:scale-110 transition-transform duration-300"/>
+            </div>
+            <h3 class="text-lg md:text-xl font-semibold uppercase text-olive"> Vildfåglar </h3>
+            <p class="text-sm text-brown mt-1"> Frö • Fett </p>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
 
   <!-------- Text banner section* -------->
-  <section class="py-8 px-6">
+  <section class="py-12 px-6">
     <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl md:text-3xl uppercase">
+      <h2 class="text-3xl md:text-3xl uppercase text-olive">
         Vi hjälper dig att hitta rätt foder till ditt djur
       </h2>
-      <p class="mt-4 text-xl max-w-2xl mx-auto font-thin">
+      <p class="mt-4 text-xl max-w-2xl mx-auto font-thin text-brown">
         Vi har ett stort utval av foder och leverantörer för att du ska hitta
         exakt det som passar ditt djur bäst, beställ online eller besök våran
         mysiga gårdsbutik Gläntan. Vi ses där lugnet möter naturen.
@@ -76,84 +116,117 @@ import ImageBanner from "../components/ImageBanner.astro";
     </div>
   </section>
 
-  <!-------- Products section* -------->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-6">
+  <!-------- How to shop section -------->
+  <section class="py-20 px-6 bg-beige">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center uppercase text-olive mb-12">
+        Så handlar du hos oss
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12">
 
-      <div class="grid md:grid-cols-4 gap-8">
-
-        <!-------- Button one -------->
-        <div class="rounded-lg box-shadow bg-white">
-
-          <div class="p-6 bg-champagne"> <!--- Image --->
-            <img src="/images/dogs.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
-          </div>
-
-          <div class="p-6 flex flex-col items-center"> <!--- Text --->
-            <h3 class="text-xl font-semibold mb-2 uppercase"> Valp </h3>
-            <p class="mb-4"> Small breed 15kg </p>
-
-            <!--- Button --->
-            <a href="https://glantanshop.myshopify.com" target="_blank" class="bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Handla </a>
-          </div>
-
+        <!-- In-store shopping -->
+        <div class="bg-white p-8 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold uppercase text-olive mb-4">
+            🏪 Besök vår gårdsbutik
+          </h3>
+          <p class="text-brown leading-relaxed mb-4">
+            Kom förbi oss på Gläntan i Harads och bläddra genom vårt stora sortiment.
+            Vår personal är här för att ge dig personlig rådgivning och hjälpa dig
+            hitta rätt foder för ditt djur. Vi öppet alla vardagar och lördag.
+          </p>
+          <p class="text-sm text-brown font-semibold">
+            📍 Gläntan 123, 960 24 Harads<br/>
+            📞 Ring oss: 0123-456789
+          </p>
         </div>
 
-        <!-------- Button two -------->
-        <div class="rounded-lg box-shadow bg-white">
-
-          <div class="p-6 bg-champagne"> <!--- Image --->
-            <img src="/images/dog.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
-          </div>
-
-          <div class="p-6 flex flex-col items-center"> <!--- Text --->
-            <h3 class="text-xl font-semibold mb-2 uppercase"> Vuxen </h3>
-            <p class="mb-4"> Adult breed 22kg </p>
-
-            <!--- Button --->
-            <a href="https://glantanshop.myshopify.com" target="_blank" class="bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Handla </a>
-          </div>
-
+        <!-- Online shopping -->
+        <div class="bg-white p-8 rounded-lg shadow">
+          <h3 class="text-2xl font-semibold uppercase text-olive mb-4">
+            🛒 Handla online
+          </h3>
+          <p class="text-brown leading-relaxed mb-4">
+            Besök vår webshop för bekväm shopping från hemmet. Stort sortiment av
+            djurfoder för alla djurslag levereras direkt till din dörr. Snabb och
+            säker betalning samt flexibel leverans gör det enkelt att få det du behöver.
+          </p>
+          <p class="text-sm text-brown font-semibold">
+            ✓ Fri frakt över 500 kr<br/>
+            ✓ Leverans i hela Sverige
+          </p>
         </div>
 
-        <!-------- Button three -------->
+      </div>
+    </div>
+  </section>
+
+  <!-------- Featured Products section -------->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center uppercase text-olive mb-12">
+        Utvalda produkter
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-------- Product one: Valpfoder -------->
         <div class="rounded-lg box-shadow bg-white">
-
-          <div class="p-6 bg-champagne"> <!--- Image --->
-            <img src="/images/cows.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
+          <div class="p-6 bg-champagne">
+            <img src="/images/dogs.jpg" alt="Valpfoder" class="w-60 h-40 object-cover mx-auto mb-4"/>
           </div>
-
-          <div class="p-6 flex flex-col items-center"> <!--- Text --->
-            <h3 class="text-xl font-semibold mb-2 uppercase"> Allergisk </h3>
-            <p class="mb-4"> Alergic breed 10kg </p>
-
-            <!--- Button --->
-            <a href="https://glantanshop.myshopify.com" target="_blank" class="bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Handla </a>
+          <div class="p-6 flex flex-col items-center">
+            <h3 class="text-lg font-semibold mb-2 uppercase text-olive"> Valpfoder </h3>
+            <p class="mb-4 text-sm text-brown text-center"> Näringsrik mat för växande hundar </p>
+            <!-- NOTE: Replace SHOPIFY_URL with actual Shopify product URL when available -->
+            <a href="https://SHOPIFY_URL/products/valpfoder" target="_blank" class="bg-olive text-white font-semibold px-8 py-2 rounded-lg hover:bg-brown-beige transition uppercase text-sm"> Handla </a>
           </div>
-
         </div>
 
-        <!-------- Button four -------->
+        <!-------- Product two: Vuxenfoder hund -------->
         <div class="rounded-lg box-shadow bg-white">
-
-          <div class="p-6 bg-champagne"> <!--- Image --->
-            <img src="/images/bunny-1.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
+          <div class="p-6 bg-champagne">
+            <img src="/images/dog.jpg" alt="Vuxenfoder" class="w-60 h-40 object-cover mx-auto mb-4"/>
           </div>
-
-          <div class="p-6 flex flex-col items-center"> <!--- Text --->
-            <h3 class="text-xl font-semibold mb-2 uppercase"> Vegansk </h3>
-            <p class="mb-4"> Vegan breed 8kg </p>
-
-            <!--- Button --->
-            <a href="https://glantanshop.myshopify.com" target="_blank" class="bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Handla </a>
+          <div class="p-6 flex flex-col items-center">
+            <h3 class="text-lg font-semibold mb-2 uppercase text-olive"> Vuxenfoder </h3>
+            <p class="mb-4 text-sm text-brown text-center"> Balanserad näring för vuxna hundar </p>
+            <!-- NOTE: Replace SHOPIFY_URL with actual Shopify product URL when available -->
+            <a href="https://SHOPIFY_URL/products/vuxenfoder-hund" target="_blank" class="bg-olive text-white font-semibold px-8 py-2 rounded-lg hover:bg-brown-beige transition uppercase text-sm"> Handla </a>
           </div>
+        </div>
 
+        <!-------- Product three: Hönsfoder -------->
+        <div class="rounded-lg box-shadow bg-white">
+          <div class="p-6 bg-champagne">
+            <img src="/images/chickens.jpg" alt="Hönsfoder" class="w-60 h-40 object-cover mx-auto mb-4"/>
+          </div>
+          <div class="p-6 flex flex-col items-center">
+            <h3 class="text-lg font-semibold mb-2 uppercase text-olive"> Hönsfoder </h3>
+            <p class="mb-4 text-sm text-brown text-center"> Stöd för friska ägg och välbefinnande </p>
+            <!-- NOTE: Replace SHOPIFY_URL with actual Shopify product URL when available -->
+            <a href="https://SHOPIFY_URL/products/honsfoder" target="_blank" class="bg-olive text-white font-semibold px-8 py-2 rounded-lg hover:bg-brown-beige transition uppercase text-sm"> Handla </a>
+          </div>
+        </div>
+
+        <!-------- Product four: Vildfågelfrö -------->
+        <div class="rounded-lg box-shadow bg-white">
+          <div class="p-6 bg-champagne">
+            <img src="/images/birds.jpg" alt="Vildfågelfrö" class="w-60 h-40 object-cover mx-auto mb-4"/>
+          </div>
+          <div class="p-6 flex flex-col items-center">
+            <h3 class="text-lg font-semibold mb-2 uppercase text-olive"> Vildfågelfrö </h3>
+            <p class="mb-4 text-sm text-brown text-center"> Næringsrikt fröblandning för vildfåglar </p>
+            <!-- NOTE: Replace SHOPIFY_URL with actual Shopify product URL when available -->
+            <a href="https://SHOPIFY_URL/products/vildfagelfro" target="_blank" class="bg-olive text-white font-semibold px-8 py-2 rounded-lg hover:bg-brown-beige transition uppercase text-sm"> Handla </a>
+          </div>
         </div>
 
       </div>
 
-      <!-------- Button to shop -------->
-      <a href="https://glantanshop.myshopify.com" target="_blank" class="inline-block mt-10 md:mt-12 ml-3 uppercase text-olive hover:border-b-1"> Besök vår webshop → </a>
+      <!-------- Link to full shop -------->
+      <div class="text-center mt-12">
+        <a href="/shop" class="inline-block uppercase text-olive font-semibold hover:underline"> Se alla produkter → </a>
+      </div>
 
     </div>
   </section>

@@ -37,80 +37,17 @@ import '../styles/global.css'; // Importera globala stilar
     <meta property="twitter:image" content={new URL(ogImage, Astro.url)} />
   </head>
   <body class="font-serif text-gray-800">
-    
-        {
+    {
       headerType === "large"
         ? <Header />
         : <HeaderSmall />
     }
 
-
-    
-    <main class="">
-      <slot />  <!-- Här injiceras sidinnehållet -->
+    <main class="min-h-screen">
+      <slot />
     </main>
-    
+
     <Footer />
-
-  <script is:inline>
-  if (typeof window !== "undefined") {
-    const header = document.getElementById("site-header");
-    const logo = document.getElementById("site-logo");
-
-    if (!header || !logo) return;
-
-    let ticking = false;
-    let isScrolled = false;
-    const SCROLL_THRESHOLD = 120;
-
-    // Add inline styles for smooth transitions
-    header.style.transition = "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
-    logo.style.transition = "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)";
-
-    const updateHeader = () => {
-      const scrolled = window.scrollY > SCROLL_THRESHOLD;
-
-      if (scrolled !== isScrolled) {
-        isScrolled = scrolled;
-
-        if (scrolled) {
-          // Scroll DOWN - make header smaller
-          header.setAttribute("data-scrolled", "true");
-          logo.style.transform = "scale(0.5)";
-        } else {
-          // Scroll UP - make header larger
-          header.removeAttribute("data-scrolled");
-          logo.style.transform = "scale(1)";
-        }
-      }
-
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateHeader);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    updateHeader(); // Run once at load
-  }
-</script>
 
   </body>
 </html>
-
-<style is:global>
-  #site-header {
-    height: 50vh !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-  }
-
-  #site-header[data-scrolled="true"] {
-    height: 5rem !important;
-    background-color: rgba(248, 246, 246, 0.9) !important;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
-  }
-</style>
