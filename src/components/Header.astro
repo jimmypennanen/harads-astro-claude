@@ -16,14 +16,6 @@ const links2 = [
 ---
 
 <!------------------------------- Header ------------------------------->
-<<<<<<< HEAD
-<header id="site-header" class="sticky top-0 w-full h-[50vh] bg-champagne/70 text-center flex items-center justify-center gap-18 shadow-md transition-all duration-300 z-50 backdrop-blur-sm">
-  
-  <!-------- Navigation part one -------->
-  <nav class="space-x-6 w-56 uppercase">
-    {links1.map(link => (
-      <a  href={link.href} class="nav-link text-olive text-2xl hover:text-brown-beige transition">
-=======
 <header id="site-header" class="sticky top-0 w-full h-[50vh] bg-champagne/70 text-center flex items-center justify-center gap-6 md:gap-20 shadow-md transition-all duration-300 z-50 backdrop-blur-sm">
 
   <!-------- Navigation part one (hidden on mobile) -------->
@@ -33,7 +25,6 @@ const links2 = [
         href={link.href}
         class="text-olive text-xl md:text-2xl hover:text-brown-beige transition"
       >
->>>>>>> 0927d43 (Clean up codebase and add mobile responsiveness)
         {link.name}
       </a>
     ))}
@@ -58,9 +49,6 @@ const links2 = [
   <!-------- Navigation part two (hidden on mobile) -------->
   <nav class="hidden md:flex space-x-6 w-56 uppercase">
     {links2.map(link => (
-<<<<<<< HEAD
-      <a  href={link.href} class="nav-link text-olive text-2xl hover:text-brown-beige transition">
-=======
       <a
         href={link.href}
         class="text-olive text-xl md:text-2xl hover:text-brown-beige transition font-medium"
@@ -105,7 +93,6 @@ const links2 = [
         href={link.href}
         class="text-olive text-2xl hover:text-brown-beige transition font-medium"
       >
->>>>>>> 0927d43 (Clean up codebase and add mobile responsiveness)
         {link.name}
       </a>
     ))}
