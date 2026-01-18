@@ -6,32 +6,20 @@ const {
 } = Astro.props;
 ---
 <!------------------------------- Image banner ------------------------------->
-<section class="relative py-12 md:py-20 px-6 mt-16">
+<section class="relative bg-gray-100 py-35 px-6 max-w-[90%] mx-auto mt-16">
 
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
-
-    <!-- Text content on the left -->
-    <div class="z-10">
-      <div class="bg-champagne/80 backdrop-blur-sm rounded-lg p-8 md:p-12">
-        <h1 class="text-3xl md:text-5xl font-bold text-olive uppercase">
-          {title}
-        </h1>
-        <p class="mt-4 text-base md:text-lg uppercase font-thin text-gray-800">
-          {text}
-        </p>
-      </div>
-    </div>
-
-    <!-- Background image on the right -->
-    <div class="hidden md:block relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
-      <img
-        src={backgroundImage}
-        alt={title}
-        class="w-full h-full object-cover"
-      />
-    </div>
-
+  <!-------- Background image -------->
+  <div class="absolute inset-0 z-0 bg-cover bg-center opacity-40" style={`background-image: url('${backgroundImage}')`} >
   </div>
 
+  <div class="relative z-10 max-w-4xl mx-auto text-center">
+    <h1 class="text-5xl font-bold text-olive"> <!--- Image text --->
+      {title}
+    </h1>
+    <p class="mt-4 text-xl uppercase font-thin text-black"> <!--- Image paragraph --->
+      {text}
+    </p>
+
+  </div>
 </section>
 
