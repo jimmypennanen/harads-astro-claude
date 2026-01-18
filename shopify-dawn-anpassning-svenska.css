@@ -1,0 +1,220 @@
+/*
+  SHOPIFY DAWN TEMA - ANPASSNING FÖR GLÄNTAN
+  Färgschema: Olivgrön, Champagne, Beige, Brunbeige
+  Typsnitt: Cormorant Garamond
+*/
+
+/* ============================================
+   1. FÄRGVARIABLER & TEMA
+   ============================================ */
+
+:root {
+  --color-olivgrön: #847949;
+  --color-champagne: #f8f6f6;
+  --color-beige: #ede8e8;
+  --color-brunbeige: #cbbdbd;
+  --color-skog: #778c72;
+  --color-brun: #574444;
+}
+
+/* ============================================
+   2. TYPOGRAFI - CORMORANT GARAMOND
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* ============================================
+   3. RUBRIKER - OLIVGRÖNA
+   ============================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-olivgrön) !important;
+  font-family: 'Cormorant Garamond', serif !important;
+}
+
+/* Specifika selektorer för Day-temat */
+.rte h1,
+.rte h2,
+.rte h3,
+.rte h4,
+.rte h5,
+.rte h6 {
+  color: var(--color-olivgrön) !important;
+}
+
+h1[style],
+h2[style],
+h3[style],
+h4[style],
+h5[style],
+h6[style] {
+  color: var(--color-olivgrön) !important;
+}
+
+/* ============================================
+   4. KNAPPAR
+   ============================================ */
+
+button,
+.button,
+.btn,
+input[type="submit"],
+button[type="submit"],
+a.button {
+  background-color: var(--color-olivgrön) !important;
+  color: white !important;
+  border: none !important;
+}
+
+button:hover,
+.button:hover,
+.btn:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+a.button:hover {
+  background-color: var(--color-brunbeige) !important;
+}
+
+/* ============================================
+   5. FOOTER - CHAMPAGNE
+   ============================================ */
+
+footer,
+.footer {
+  background-color: var(--color-champagne) !important;
+  color: var(--color-olivgrön) !important;
+}
+
+footer a,
+.footer a,
+footer p,
+.footer p,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6,
+.footer h1,
+.footer h2,
+.footer h3,
+.footer h4,
+.footer h5,
+.footer h6 {
+  color: var(--color-olivgrön) !important;
+}
+
+footer a:hover,
+.footer a:hover {
+  color: var(--color-brunbeige) !important;
+}
+
+/* ============================================
+   6. SIDHUVUD/HEADER - CHAMPAGNE
+   ============================================ */
+
+header,
+.header,
+.header-nav {
+  background-color: var(--color-champagne) !important;
+}
+
+header a,
+.header a {
+  color: var(--color-olivgrön) !important;
+}
+
+header a:hover,
+.header a:hover {
+  color: var(--color-brunbeige) !important;
+}
+
+/* ============================================
+   7. PRODUKTKORT
+   ============================================ */
+
+.product-card,
+.product__card {
+  border: 1px solid var(--color-beige) !important;
+  background-color: white !important;
+}
+
+.product-card__title,
+.product__title {
+  color: var(--color-olivgrön) !important;
+}
+
+/* ============================================
+   8. FORMULÄR
+   ============================================ */
+
+input,
+textarea,
+select {
+  border-color: var(--color-beige) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-olivgrön) !important;
+}
+
+label {
+  color: var(--color-olivgrön) !important;
+}
+
+/* ============================================
+   9. HJÄLPKLASSER
+   ============================================ */
+
+.text-olivgrön {
+  color: var(--color-olivgrön) !important;
+}
+
+.text-champagne {
+  color: var(--color-champagne) !important;
+}
+
+.text-beige {
+  color: var(--color-beige) !important;
+}
+
+.text-brunbeige {
+  color: var(--color-brunbeige) !important;
+}
+
+.bg-olivgrön {
+  background-color: var(--color-olivgrön) !important;
+}
+
+.bg-champagne {
+  background-color: var(--color-champagne) !important;
+}
+
+.bg-beige {
+  background-color: var(--color-beige) !important;
+}
+
+.bg-brunbeige {
+  background-color: var(--color-brunbeige) !important;
+}
+
+/* Skuggor */
+.shadow-light {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.shadow-md {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+              rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+              rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* ============================================
+   SLUT PÅ ANPASSNINGS-CSS
+   ============================================ */

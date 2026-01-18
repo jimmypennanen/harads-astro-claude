@@ -1,0 +1,649 @@
+/*
+  SHOPIFY DAWN THEME CUSTOMIZATION CSS
+  For: Gläntan - Djur och Natur
+  Color Scheme: Olive, Champagne, Beige, Brown-Beige
+  Font: Cormorant Garamond
+
+  INSTALLATION:
+  1. Go to Shopify Admin > Online Store > Themes
+  2. Find Dawn theme > Actions > Edit code
+  3. In "Assets" folder, open or create "custom-theme.css"
+  4. Paste all content below
+  5. Go to theme.liquid (in Sections folder)
+  6. Add this line in the <head> section:
+     {{ 'custom-theme.css' | asset_url | stylesheet_tag }}
+*/
+
+/* ============================================
+   1. COLOR VARIABLES & THEME
+   ============================================ */
+
+:root {
+  --color-olive: #847949;
+  --color-champagne: #f8f6f6;
+  --color-beige: #ede8e8;
+  --color-brown-beige: #cbbdbd;
+  --color-forest: #778c72;
+  --color-brown: #574444;
+
+  --color-background: var(--color-champagne);
+  --color-text: var(--color-brown);
+  --color-text-light: var(--color-olive);
+  --color-border: var(--color-beige);
+  --color-button-bg: var(--color-olive);
+  --color-button-text: #ffffff;
+  --color-button-hover: var(--color-brown-beige);
+}
+
+/* ============================================
+   2. TYPOGRAPHY - CORMORANT GARAMOND
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-text);
+  background-color: var(--color-champagne);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--color-olive);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--color-brown);
+  line-height: 1.8;
+}
+
+/* ============================================
+   3. HEADER & NAVIGATION
+   ============================================ */
+
+.header {
+  background-color: var(--color-champagne);
+  border-bottom: 1px solid var(--color-beige);
+  padding: 1.5rem 2rem;
+}
+
+.header__heading {
+  color: var(--color-olive);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.header-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.header-menu__item a {
+  color: var(--color-olive);
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.header-menu__item a:hover {
+  color: var(--color-brown-beige);
+}
+
+/* Mobile menu hamburger */
+@media (max-width: 749px) {
+  .header-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(248, 246, 246, 0.95);
+    backdrop-filter: blur(12px);
+    gap: 3rem;
+    z-index: 100;
+  }
+
+  .header-menu.active {
+    display: flex;
+  }
+
+  .header-menu__item a {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   4. BUTTONS
+   ============================================ */
+
+button, .button {
+  background-color: var(--color-olive);
+  color: var(--color-button-text);
+  border: none;
+  padding: 0.75rem 2.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.375rem;
+}
+
+button:hover, .button:hover {
+  background-color: var(--color-brown-beige);
+  transform: translateY(-2px);
+}
+
+button:active, .button:active {
+  transform: translateY(0);
+}
+
+/* Specific Dawn theme button classes */
+.btn,
+.button,
+input[type="submit"],
+button[type="submit"] {
+  background-color: var(--color-olive);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.btn:hover,
+.button:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: var(--color-brown-beige);
+}
+
+/* ============================================
+   5. PRODUCT CARDS
+   ============================================ */
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-beige);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.product-card__image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-color: var(--color-beige);
+}
+
+.product-card__title {
+  color: var(--color-olive);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.product-card__price {
+  color: var(--color-brown);
+  font-size: 1.1rem;
+  margin: 0.5rem 0 1rem 0;
+  font-weight: 500;
+}
+
+.product-card__button {
+  width: 100%;
+  background-color: var(--color-olive);
+  color: white;
+  padding: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card__button:hover {
+  background-color: var(--color-brown-beige);
+}
+
+/* ============================================
+   6. HERO BANNER
+   ============================================ */
+
+.hero {
+  background-color: var(--color-champagne);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  color: var(--color-olive);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.hero__text {
+  color: var(--color-brown);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+/* ============================================
+   7. FORMS & INPUTS
+   ============================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  background-color: #ffffff;
+  border: 1px solid var(--color-beige);
+  color: var(--color-brown);
+  font-family: 'Cormorant Garamond', serif;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-olive);
+  box-shadow: 0 0 0 3px rgba(132, 121, 73, 0.1);
+}
+
+label {
+  color: var(--color-olive);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   8. FOOTER
+   ============================================ */
+
+.footer {
+  background-color: var(--color-brown);
+  color: var(--color-champagne);
+  padding: 3rem 2rem;
+}
+
+.footer__heading {
+  color: var(--color-champagne);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.footer__link {
+  color: var(--color-champagne);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.footer__link:hover {
+  color: var(--color-olive);
+}
+
+/* ============================================
+   9. COLLECTION PAGE
+   ============================================ */
+
+.collection__title {
+  color: var(--color-olive);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* ============================================
+   10. SIDEBAR & FILTERS
+   ============================================ */
+
+.sidebar-filter__title {
+  color: var(--color-olive);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.sidebar-filter__item {
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-filter__link {
+  color: var(--color-brown);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sidebar-filter__link:hover {
+  color: var(--color-olive);
+}
+
+/* ============================================
+   11. CART & CHECKOUT
+   ============================================ */
+
+.cart__heading {
+  color: var(--color-olive);
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.cart-item {
+  border-bottom: 1px solid var(--color-beige);
+  padding: 1.5rem 0;
+}
+
+.cart-item__title {
+  color: var(--color-olive);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cart-item__price {
+  color: var(--color-brown);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   12. SECTION: FEATURED PRODUCTS
+   ============================================ */
+
+.featured-products {
+  padding: 3rem 2rem;
+  background-color: var(--color-champagne);
+}
+
+.featured-products__title {
+  color: var(--color-olive);
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+
+/* ============================================
+   13. SECTION: TEXT WITH IMAGE
+   ============================================ */
+
+.text-with-image {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+.text-with-image__content h2 {
+  color: var(--color-olive);
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.text-with-image__content p {
+  color: var(--color-brown);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .text-with-image {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   14. SECTION: CALL TO ACTION
+   ============================================ */
+
+.section-cta {
+  background-color: var(--color-olive);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-cta__title {
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.section-cta__text {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-cta__button {
+  background-color: white;
+  color: var(--color-olive);
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-cta__button:hover {
+  background-color: var(--color-champagne);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   15. RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__text {
+    font-size: 1rem;
+  }
+
+  .collection-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  h1, h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .header-menu {
+    gap: 2rem;
+  }
+
+  .header-menu__item a {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.5rem;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button, .button {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .featured-products {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ============================================
+   16. UTILITY CLASSES
+   ============================================ */
+
+.text-olive {
+  color: var(--color-olive);
+}
+
+.text-champagne {
+  color: var(--color-champagne);
+}
+
+.text-beige {
+  color: var(--color-beige);
+}
+
+.text-brown-beige {
+  color: var(--color-brown-beige);
+}
+
+.bg-olive {
+  background-color: var(--color-olive);
+}
+
+.bg-champagne {
+  background-color: var(--color-champagne);
+}
+
+.bg-beige {
+  background-color: var(--color-beige);
+}
+
+.bg-brown-beige {
+  background-color: var(--color-brown-beige);
+}
+
+/* Shadows */
+.shadow-light {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.shadow-md {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+              rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+              rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* ============================================
+   17. ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* ============================================
+   END OF CUSTOMIZATION CSS
+   ============================================ */
