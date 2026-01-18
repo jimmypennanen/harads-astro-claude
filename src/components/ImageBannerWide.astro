@@ -8,18 +8,27 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative bg-gray-100 py-35 px-6 mx-auto">
+<section class="relative bg-gray-100 py-16 md:py-28 px-6 mx-auto">
 
   <div class="absolute inset-0 z-0 bg-cover bg-center opacity-45 bg-no-repeat" style={`background-image: url('${backgroundImage}'); background-position: ${backgroundPosition};`}> </div> <!-------- Background image -------->
 
+<<<<<<< HEAD
   
   <div class=" w-[25%] bg-beige rounded-4xl p-10 opacity-60 text-center"> <!-------- Image text div -------->
     <h1 class="text-4xl md:text-5xl z-50 font-bold text-olive uppercase">
       {title}
     </h1>
     <p class="mt-4 text-xl text-black  uppercase">
+=======
+
+  <div class="relative z-10 w-[90%] md:w-[40%] lg:w-[25%] mx-auto text-center md:text-left"> <!-------- Image text -------->
+    <h1 class="text-4xl md:text-5xl font-bold text-olive uppercase">
+      {title}
+    </h1>
+    <p class="mt-4 text-base md:text-xl text-black font-thin uppercase">
+>>>>>>> 0927d43 (Clean up codebase and add mobile responsiveness)
       {text}
     </p>
-   
+
   </div>
 </section>

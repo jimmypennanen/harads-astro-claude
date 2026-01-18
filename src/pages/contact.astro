@@ -15,14 +15,14 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
 <section class="py-12">
 
   <div class="max-w-6xl mx-auto px-6"> <!--- Text above the form --->
-    <h2 class="font-bold text-lg uppercase mb-8 pl-30 pt-8">
+    <h2 class="font-bold text-lg uppercase mb-8 pl-4 md:pl-12 lg:pl-30 pt-8">
       Skicka ett mail
     </h2>
-    
+
     <!-------- Form -------->
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-10"> <!--- Name input area --->
       <div class="lg:col-span-3">
-        <form class="px-30 pt-3 bg-white/0">
+        <form class="px-4 md:px-12 lg:px-30 pt-3 bg-white/0">
           <div class="relative z-0 mb-6">
             <input type="text" name="name" id="name" class="block py-2.5 px-0 w-full text-sm bg-champagne border-transparent border-2 appearance-none focus:outline-none focus:ring-0 focus:border-beige peer" placeholder=" " required />
             <label for="name" class="px-2 peer-focus:px-0 peer-focus:font-medium absolute text-md duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7"> Namn </label>
@@ -38,7 +38,7 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
             <label for="messsage" class="-top-[1.4rem] peer-focus:font-medium absolute text-md duration-300 transform -translate-y-6 scale-75  origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75"> Meddelande </label>
 
             <!-------- Button -------->
-            <input type="submit" value="SÄND" class="block font-semibold w-min border-2 bg-olive text-white hover:bg-brown-beige ml-auto mt-5 cursor-pointer px-20 py-2 rounded-lg transition uppercase"/>
+            <input type="submit" value="SÄND" class="block font-semibold w-min border-2 bg-olive text-white hover:bg-brown-beige ml-auto mt-5 cursor-pointer px-8 md:px-20 py-2 rounded-lg transition uppercase"/>
           </div> 
         </form>
       </div>

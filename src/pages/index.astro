@@ -12,49 +12,49 @@ import ImageBanner from "../components/ImageBanner.astro";
     backgroundImage="/images/hero-image.jpg"
   />
 
-  <!-------- Animal banner -------->
-  <section class="bg-white py-20 px-6">
+  <!-------- Animal banner *section -------->
+  <section class=" py-20 px-6">
     <div
-      class="flex flex-col md:flex-row justify-center items-center gap-20 max-w-[90%] mx-auto">
+      class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 lg:gap-20 max-w-[90%] mx-auto">
 
       <a href="/shop" class="">
         <div class="text-center">
-          <img src="/images/horses.jpg" alt="horse" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+          <img src="/images/horses.jpg" alt="horse" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
           <h3 class="text-xl font-semibold uppercase text-olive"> Häst </h3>
         </div>
       </a>
 
       <a href="/shop" class="">
         <div class="text-center">
-          <img src="/images/birds.jpg" alt="bird" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+          <img src="/images/birds.jpg" alt="bird" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
           <h3 class="text-xl font-semibold uppercase text-olive"> Fågel </h3>
         </div>
       </a>
 
       <a href="/shop" class="">
         <div class="text-center">
-          <img src="/images/bunny.jpg" alt="bunny" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+          <img src="/images/bunny.jpg" alt="bunny" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
           <h3 class="text-xl font-semibold uppercase text-olive"> Kanin </h3>
         </div>
       </a>
 
       <a href="/shop" class="">
         <div class="text-center">
-          <img src="/images/deer.jpg" alt="deer" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+          <img src="/images/deer.jpg" alt="deer" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
           <h3 class="text-xl font-semibold uppercase text-olive"> Rådjur </h3>
         </div>
       </a>
 
       <a href="/shop" class="">
         <div class="text-center">
-          <img src="/images/dog.jpg" alt="dog" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+          <img src="/images/dog.jpg" alt="dog" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
           <h3 class="text-xl font-semibold uppercase text-olive"> Hund </h3>
         </div>
       </a>
 
       <a href="/shop" class="">
         <div class="text-center">
-          <img src="/images/cat.jpg" alt="cat" class="w-30 h-30 object-cover rounded-full mx-auto mb-4"/>
+          <img src="/images/cat.jpg" alt="cat" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-full mx-auto mb-4"/>
           <h3 class="text-xl font-semibold uppercase text-olive"> Katt </h3>
         </div>
       </a>
@@ -62,8 +62,8 @@ import ImageBanner from "../components/ImageBanner.astro";
     </div>
   </section>
 
-  <!-------- Text banner -------->
-  <section class="bg-white py-8 px-6">
+  <!-------- Text banner section* -------->
+  <section class="py-8 px-6">
     <div class="max-w-5xl mx-auto text-center">
       <h2 class="text-3xl md:text-3xl uppercase">
         Vi hjälper dig att hitta rätt foder till ditt djur
@@ -76,14 +76,14 @@ import ImageBanner from "../components/ImageBanner.astro";
     </div>
   </section>
 
-  <!-------- Products -------->
-  <section class="py-16 bg-white">
+  <!-------- Products section* -------->
+  <section class="py-16">
     <div class="max-w-6xl mx-auto px-6">
 
       <div class="grid md:grid-cols-4 gap-8">
 
         <!-------- Button one -------->
-        <div class="rounded-lg box-shadow">
+        <div class="rounded-lg box-shadow bg-white">
 
           <div class="p-6 bg-champagne"> <!--- Image --->
             <img src="/images/dogs.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
@@ -94,13 +94,13 @@ import ImageBanner from "../components/ImageBanner.astro";
             <p class="mb-4"> Small breed 15kg </p>
 
             <!--- Button --->
-            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
+            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
           </div>
 
         </div>
 
         <!-------- Button two -------->
-        <div class="rounded-lg box-shadow">
+        <div class="rounded-lg box-shadow bg-white">
 
           <div class="p-6 bg-champagne"> <!--- Image --->
             <img src="/images/dog.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
@@ -111,13 +111,13 @@ import ImageBanner from "../components/ImageBanner.astro";
             <p class="mb-4"> Adult breed 22kg </p>
 
             <!--- Button --->
-            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
+            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
           </div>
 
         </div>
 
         <!-------- Button three -------->
-        <div class="rounded-lg box-shadow">
+        <div class="rounded-lg box-shadow bg-white">
 
           <div class="p-6 bg-champagne"> <!--- Image --->
             <img src="/images/cows.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
@@ -128,13 +128,13 @@ import ImageBanner from "../components/ImageBanner.astro";
             <p class="mb-4"> Alergic breed 10kg </p>
 
             <!--- Button --->
-            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
+            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
           </div>
 
         </div>
 
         <!-------- Button four -------->
-        <div class="rounded-lg box-shadow">
+        <div class="rounded-lg box-shadow bg-white">
 
           <div class="p-6 bg-champagne"> <!--- Image --->
             <img src="/images/bunny-1.jpg" alt="shop" class="w-60 h-40 object-cover mx-auto mb-4"/>
@@ -145,7 +145,7 @@ import ImageBanner from "../components/ImageBanner.astro";
             <p class="mb-4"> Vegan breed 8kg </p>
 
             <!--- Button --->
-            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
+            <a href="/shop" class="inline-block bg-olive text-white font-semibold px-8 md:px-20 py-2 rounded-lg hover:bg-brown-beige transition uppercase"> Köp </a>
           </div>
 
         </div>
@@ -153,7 +153,7 @@ import ImageBanner from "../components/ImageBanner.astro";
       </div>
 
       <!-------- Button to shop -------->
-      <a href="/shop" class="inline-block mt-15 ml-3 uppercase text-olive hover:border-b-1"> Våra erbjudanden → </a>
+      <a href="/shop" class="inline-block mt-10 md:mt-12 ml-3 uppercase text-olive hover:border-b-1"> Våra erbjudanden → </a>
 
     </div>
   </section>
