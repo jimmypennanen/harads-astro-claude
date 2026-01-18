@@ -22,6 +22,14 @@
     
 }
 
+#site-header.scrolled {
+  height: 5rem !important;
+}
+
+#site-header.scrolled #site-logo {
+  height: 2.5rem !important;
+}
+
 @theme {
   --color-beige: #ede8e8;
   --color-brown-beige: #cbbdbd;
