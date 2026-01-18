@@ -82,14 +82,15 @@ import '../styles/global.css'; // Importera globala stilar
 </script>
 
 <style is:global>
-  #site-header[data-scrolled="true"] {
-    height: 5rem;
-    background-color: rgba(248, 246, 246, 0.9);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  #site-header {
+    height: 50vh !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
 
-  #site-header {
-    height: 50vh;
+  #site-header[data-scrolled="true"] {
+    height: 5rem !important;
+    background-color: rgba(248, 246, 246, 0.9) !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
   }
 </style>
 
