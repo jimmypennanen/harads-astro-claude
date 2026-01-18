@@ -105,6 +105,8 @@ const links2 = [
     const mobileMenu = document.getElementById("mobile-menu");
     const closeMenuBtn = document.getElementById("close-menu-btn-overlay");
     const menuLinks = mobileMenu.querySelectorAll("a");
+    const siteHeader = document.getElementById("site-header");
+    const siteLogo = document.getElementById("site-logo");
 
     // Toggle menu on hamburger click
     hamburgerBtn.addEventListener("click", () => {
@@ -122,6 +124,28 @@ const links2 = [
       link.addEventListener("click", () => {
         mobileMenu.style.display = "none";
       });
+    });
+
+    // Header scroll animation
+    let hasScrolled = false;
+    window.addEventListener("scroll", () => {
+      const scrollTop = window.scrollY;
+      const isScrolled = scrollTop > 50;
+
+      if (isScrolled !== hasScrolled) {
+        hasScrolled = isScrolled;
+        if (hasScrolled) {
+          siteHeader.style.height = "5rem";
+          siteHeader.style.backgroundColor = "rgba(248, 246, 246, 0.9)";
+          siteHeader.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
+          siteLogo.style.height = "2.5rem";
+        } else {
+          siteHeader.style.height = "50vh";
+          siteHeader.style.backgroundColor = "rgba(248, 246, 246, 0.7)";
+          siteHeader.style.boxShadow = "0 1px 3px rgba(0, 0, 0, 0.1)";
+          siteLogo.style.height = "10rem";
+        }
+      }
     });
   }
 </script>
