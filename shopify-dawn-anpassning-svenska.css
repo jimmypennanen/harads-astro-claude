@@ -169,7 +169,320 @@ label {
 }
 
 /* ============================================
-   9. HJÄLPKLASSER
+   9. PRODUKTKORT - UTÖKAD STYLING
+   ============================================ */
+
+.product-card,
+.product__card,
+.product-item,
+[data-product-card] {
+  background-color: white !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  transition: box-shadow 0.3s ease !important;
+}
+
+.product-card:hover,
+.product__card:hover,
+.product-item:hover,
+[data-product-card]:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-card__image-wrapper,
+.product__image,
+.product-image {
+  background-color: var(--color-champagne) !important;
+  padding: 16px !important;
+  overflow: hidden !important;
+  aspect-ratio: 1 !important;
+}
+
+.product-card__image,
+.product-image img,
+[data-product-image] {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 6px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.product-card:hover .product-card__image,
+.product-card:hover .product-image img,
+.product-item:hover [data-product-image] {
+  transform: scale(1.05) !important;
+}
+
+.product-card__title,
+.product-card__heading,
+.product__title,
+.product-item__title {
+  color: var(--color-olivgrön) !important;
+  text-transform: uppercase !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin: 12px 0 8px !important;
+}
+
+.product-card__description,
+.product-description {
+  color: var(--color-brun) !important;
+  font-size: 14px !important;
+  margin: 8px 0 12px !important;
+}
+
+.product-card__price,
+.product-price,
+.price {
+  color: var(--color-brun) !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  margin: 12px 0 !important;
+}
+
+/* ============================================
+   10. KASSASIDA & VARUKORGSTYLING
+   ============================================ */
+
+.cart-container,
+[data-cart],
+.cart {
+  background-color: white !important;
+}
+
+.cart__item,
+.cart-item {
+  background-color: white !important;
+  border-bottom: 1px solid var(--color-beige) !important;
+  padding: 16px 0 !important;
+}
+
+.cart__item-image,
+.cart-item-image {
+  border-radius: 6px !important;
+  overflow: hidden !important;
+  background-color: var(--color-champagne) !important;
+}
+
+.cart-summary,
+.order-summary {
+  background-color: var(--color-champagne) !important;
+  border-radius: 8px !important;
+  padding: 20px !important;
+}
+
+.cart-summary__total,
+.order-summary__total {
+  color: var(--color-olivgrön) !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+.cart__remove,
+.cart-item-remove {
+  color: var(--color-olivgrön) !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
+.cart__remove:hover,
+.cart-item-remove:hover {
+  color: var(--color-brunbeige) !important;
+}
+
+/* ============================================
+   11. KOLLEKTIONSSIDA - FILTRER OCH GRID
+   ============================================ */
+
+.collection-sidebar,
+.filters,
+[data-collection-filters] {
+  background-color: var(--color-champagne) !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+}
+
+.collection-sidebar__title,
+.filters__title {
+  color: var(--color-olivgrön) !important;
+  font-weight: 600 !important;
+}
+
+.filter-group label,
+[data-filter-label] {
+  color: var(--color-brun) !important;
+  cursor: pointer !important;
+}
+
+.filter-group label:hover,
+[data-filter-label]:hover {
+  color: var(--color-olivgrön) !important;
+}
+
+.collection-products-grid,
+[data-products-grid] {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+@media (max-width: 1024px) {
+  .collection-products-grid,
+  [data-products-grid] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .collection-products-grid,
+  [data-products-grid] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ============================================
+   12. FORMULÄR - INPUTS OCH TEXTAREAS
+   ============================================ */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  border: 1px solid var(--color-beige) !important;
+  background-color: white !important;
+  padding: 10px 12px !important;
+  font-size: 14px !important;
+  color: var(--color-brun) !important;
+  border-radius: 4px !important;
+  font-family: inherit !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6c6c6c !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-olivgrön) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(132, 121, 73, 0.1) !important;
+}
+
+label {
+  color: var(--color-olivgrön) !important;
+  font-weight: 600 !important;
+  margin-bottom: 6px !important;
+  display: block !important;
+}
+
+/* ============================================
+   13. PRIMÄRA & SEKUNDÄRA KNAPPAR
+   ============================================ */
+
+button.secondary,
+a.button--secondary,
+.btn-secondary,
+input[type="button"].secondary {
+  background-color: white !important;
+  border: 2px solid var(--color-olivgrön) !important;
+  color: var(--color-olivgrön) !important;
+}
+
+button.secondary:hover,
+a.button--secondary:hover,
+.btn-secondary:hover {
+  background-color: var(--color-champagne) !important;
+  color: var(--color-olivgrön) !important;
+}
+
+/* ============================================
+   14. LÄNKTYPER & FOKUS
+   ============================================ */
+
+a {
+  color: var(--color-olivgrön) !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--color-brunbeige) !important;
+  text-decoration: underline !important;
+}
+
+a:focus {
+  outline: 2px solid var(--color-olivgrön) !important;
+  outline-offset: 2px !important;
+}
+
+/* ============================================
+   15. RESPONSIVE DESIGN - MOBIL
+   ============================================ */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  .product-card__title,
+  .product-card__heading {
+    font-size: 16px !important;
+  }
+
+  button,
+  .button,
+  input[type="submit"] {
+    padding: 12px 16px !important;
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  .collection-products-grid,
+  [data-products-grid] {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  .cart-summary,
+  .order-summary {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-products-grid,
+  [data-products-grid] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .collection-sidebar,
+  .filters {
+    margin-bottom: 20px !important;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+  }
+}
+
+/* ============================================
+   16. HJÄLPKLASSER
    ============================================ */
 
 .text-olivgrön {
@@ -186,6 +499,10 @@ label {
 
 .text-brunbeige {
   color: var(--color-brunbeige) !important;
+}
+
+.text-brun {
+  color: var(--color-brun) !important;
 }
 
 .bg-olivgrön {
@@ -206,13 +523,41 @@ label {
 
 /* Skuggor */
 .shadow-light {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
 }
 
 .shadow-md {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
               rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-              rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+              rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+}
+
+.rounded-sm {
+  border-radius: 4px !important;
+}
+
+.rounded-md {
+  border-radius: 8px !important;
+}
+
+.rounded-lg {
+  border-radius: 12px !important;
+}
+
+/* ============================================
+   17. TILLGÄNGLIGHET
+   ============================================ */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border-width: 0 !important;
 }
 
 /* ============================================
