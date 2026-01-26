@@ -123,6 +123,12 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
   const successOverlay = document.getElementById('successOverlay') as HTMLDivElement | null;
 
   if (form && successOverlay) {
+    // DEBUG: Show overlay immediately to test visibility
+    console.log('Form and overlay found');
+    console.log('successOverlay element:', successOverlay);
+    successOverlay.classList.remove('opacity-0', 'pointer-events-none');
+    successOverlay.classList.add('opacity-100');
+
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
@@ -143,6 +149,8 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
         // setTimeout(() => { /* enable form */ }, 500);
       }, 2500);
     });
+  } else {
+    console.error('Form or overlay not found');
   }
 </script>
 
