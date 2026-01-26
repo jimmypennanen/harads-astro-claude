@@ -26,14 +26,16 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
         <!-- Success Overlay -->
         <div id="successOverlay" class="opacity-0 pointer-events-none fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/20 transition-opacity duration-500" role="status" aria-live="polite" aria-label="Meddelande skickat framgångsrikt">
           <!-- Content (outline heart + text) -->
-          <div class="relative z-10 text-center">
-            <!-- Sharp outline heart -->
-            <svg class="w-48 h-48 md:w-56 md:h-56 text-white animate-heart mx-auto mb-6" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+          <div class="relative z-10 text-center animate-heart">
+            <!-- Outline heart background -->
+            <svg class="absolute inset-0 w-full h-full -z-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color: var(--color-olive);">
               <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
 
-            <h3 class="text-3xl md:text-4xl font-bold text-olive mb-2">Meddelande skickat</h3>
-            <p class="text-brown text-lg">Tack för att du hör av dig!</p>
+            <div class="relative z-10 px-8 py-12">
+              <h3 class="text-3xl md:text-4xl font-bold text-olive mb-2">Meddelande skickat</h3>
+              <p class="text-brown text-lg">Tack för att du hör av dig!</p>
+            </div>
           </div>
         </div>
 
@@ -110,32 +112,38 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
   .animate-heart {
     animation: heartFloat 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
+
+  .animate-heart svg {
+    animation: heartFloat 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
 </style>
 
 <script>
-  const form = document.getElementById('contactForm');
-  const successOverlay = document.getElementById('successOverlay');
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const successOverlay = document.getElementById('successOverlay') as HTMLDivElement | null;
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  if (form && successOverlay) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
 
-    // Show overlay with fade-in
-    successOverlay.classList.remove('opacity-0', 'pointer-events-none');
-    successOverlay.classList.add('opacity-100');
+      // Show overlay with fade-in
+      successOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      successOverlay.classList.add('opacity-100');
 
-    // After animation completes (2.5s), reset form and hide overlay
-    setTimeout(() => {
-      // Reset form fields
-      form.reset();
+      // After animation completes (2.5s), reset form and hide overlay
+      setTimeout(() => {
+        // Reset form fields
+        form.reset();
 
-      // Fade out overlay
-      successOverlay.classList.add('opacity-0', 'pointer-events-none');
-      successOverlay.classList.remove('opacity-100');
+        // Fade out overlay
+        successOverlay.classList.add('opacity-0', 'pointer-events-none');
+        successOverlay.classList.remove('opacity-100');
 
-      // Optional: You can add a small delay before allowing interaction again
-      // setTimeout(() => { /* enable form */ }, 500);
-    }, 2500);
-  });
+        // Optional: You can add a small delay before allowing interaction again
+        // setTimeout(() => { /* enable form */ }, 500);
+      }, 2500);
+    });
+  }
 </script>
 
 </Layout>
