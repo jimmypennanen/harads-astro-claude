@@ -25,15 +25,15 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
       <div class="lg:col-span-3 relative">
         <!-- Success Overlay -->
         <div id="successOverlay" class="opacity-0 pointer-events-none fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/20 transition-opacity duration-500" role="status" aria-live="polite" aria-label="Meddelande skickat framgångsrikt">
-          <div class="animate-heart flex flex-col items-center justify-center gap-6">
+          <div class="animate-heart flex flex-col items-center justify-center gap-6 bg-red-500 p-8">
             <!-- Outline heart SVG -->
-            <svg class="w-48 h-48 md:w-64 md:h-64 heart-outline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <svg class="w-96 h-96 heart-outline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color: #7a6b3a;">
               <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
 
-            <div class="text-center">
-              <h3 class="text-3xl md:text-4xl font-bold text-olive mb-2">Meddelande skickat</h3>
-              <p class="text-brown text-lg">Tack för att du hör av dig!</p>
+            <div class="text-center bg-green-500 p-4">
+              <h3 class="text-5xl font-bold text-olive mb-2">Meddelande skickat</h3>
+              <p class="text-brown text-2xl">Tack för att du hör av dig!</p>
             </div>
           </div>
         </div>
