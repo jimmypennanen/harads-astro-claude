@@ -24,10 +24,7 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-10"> <!--- Name input area --->
       <div class="lg:col-span-3 relative">
         <!-- Success Overlay -->
-        <div id="successOverlay" class="opacity-0 pointer-events-none absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-500" role="status" aria-live="polite" aria-label="Meddelande skickat framgångsrikt">
-          <!-- Heart-shaped blur window -->
-          <div id="heartBlur" class="heart-blur-window"></div>
-
+        <div id="successOverlay" class="opacity-0 pointer-events-none absolute inset-0 z-20 flex items-center justify-center backdrop-blur-sm bg-white/20 transition-opacity duration-500" role="status" aria-live="polite" aria-label="Meddelande skickat framgångsrikt">
           <!-- Content (outline heart + text) -->
           <div class="relative z-10 text-center">
             <!-- Sharp outline heart -->
@@ -112,43 +109,6 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
 
   .animate-heart {
     animation: heartFloat 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-  }
-
-  .heart-blur-window {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 240px;
-    height: 240px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' opacity='0.15'%3E%3Cpath d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'/%3E%3C/svg%3E");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 50%;
-  }
-
-  @media (min-width: 768px) {
-    .heart-blur-window {
-      width: 300px;
-      height: 300px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .heart-blur-window {
-      width: 360px;
-      height: 360px;
-    }
-  }
-
-  @supports not (backdrop-filter: blur(12px)) {
-    .heart-blur-window {
-      background-color: rgba(255, 255, 255, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.4);
-    }
   }
 </style>
 
