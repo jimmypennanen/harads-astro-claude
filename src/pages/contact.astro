@@ -22,8 +22,26 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
     <!-------- Form -------->
     <!-- NOTE: Form action is a placeholder. Replace with actual form service (Formspree, Netlify Forms, etc.) when ready. -->
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-10"> <!--- Name input area --->
-      <div class="lg:col-span-3">
-        <form class="px-4 md:px-8 lg:px-12 pt-3 bg-white/0" action="#" method="POST">
+      <div class="lg:col-span-3 relative">
+        <!-- Success Overlay -->
+        <div id="successOverlay" class="opacity-0 pointer-events-none absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-500" role="status" aria-live="polite" aria-label="Meddelande skickat framgångsrikt">
+          <!-- Heart-shaped blur window -->
+          <div id="heartBlur" class="heart-blur-window"></div>
+
+          <!-- Content (outline heart + text) -->
+          <div class="relative z-10 text-center">
+            <!-- Sharp outline heart -->
+            <svg class="w-48 h-48 md:w-56 md:h-56 text-white animate-heart mx-auto mb-6" fill="none" stroke="currentColor" stroke-width="1" viewBox="0 0 24 24">
+              <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+
+            <h3 class="text-3xl md:text-4xl font-bold text-olive mb-2">Meddelande skickat</h3>
+            <p class="text-brown text-lg">Tack för att du hör av dig!</p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="relative px-4 md:px-8 lg:px-12 pt-3 bg-white/0 z-0" action="#" method="POST" id="contactForm">
           <div class="relative z-0 mb-6">
             <input type="text" name="name" id="name" class="block py-2.5 px-0 w-full text-sm bg-champagne border-transparent border-2 appearance-none focus:outline-none focus:ring-0 focus:border-beige peer" placeholder=" " required />
             <label for="name" class="px-2 peer-focus:px-0 peer-focus:font-medium absolute text-md duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-7"> Namn </label>
@@ -71,5 +89,97 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
       <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6470.183510095839!2d20.952380289812442!3d66.08264925690885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgl%C3%A4ntan%20harads!5e0!3m2!1ssv!2spt!4v1765138758069!5m2!1ssv!2spt" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class=" opacity-40 pb-20"></iframe>
     </div>
 </section>
+
+<style>
+  @keyframes heartFloat {
+    0% {
+      transform: scale(0) translateY(0);
+      opacity: 1;
+    }
+    30% {
+      transform: scale(1.1) translateY(-5px);
+      opacity: 1;
+    }
+    70% {
+      transform: scale(1.05) translateY(-15px);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9) translateY(-30px);
+      opacity: 0;
+    }
+  }
+
+  .animate-heart {
+    animation: heartFloat 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .heart-blur-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' fill='black'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' fill='black'/></svg>");
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    .heart-blur-window {
+      width: 280px;
+      height: 280px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .heart-blur-window {
+      width: 320px;
+      height: 320px;
+    }
+  }
+
+  @supports not (backdrop-filter: blur(10px)) {
+    .heart-blur-window {
+      background: rgba(255, 255, 255, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+</style>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const successOverlay = document.getElementById('successOverlay');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Show overlay with fade-in
+    successOverlay.classList.remove('opacity-0', 'pointer-events-none');
+    successOverlay.classList.add('opacity-100');
+
+    // After animation completes (2.5s), reset form and hide overlay
+    setTimeout(() => {
+      // Reset form fields
+      form.reset();
+
+      // Fade out overlay
+      successOverlay.classList.add('opacity-0', 'pointer-events-none');
+      successOverlay.classList.remove('opacity-100');
+
+      // Optional: You can add a small delay before allowing interaction again
+      // setTimeout(() => { /* enable form */ }, 500);
+    }, 2500);
+  });
+</script>
 
 </Layout>
