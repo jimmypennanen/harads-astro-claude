@@ -26,13 +26,13 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
         <!-- Success Overlay -->
         <div id="successOverlay" class="opacity-0 pointer-events-none fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-white/20 transition-opacity duration-500" role="status" aria-live="polite" aria-label="Meddelande skickat framgångsrikt">
           <!-- Content (outline heart + text) -->
-          <div class="relative z-10 text-center animate-heart">
-            <!-- Outline heart background -->
-            <svg class="absolute inset-0 w-full h-full -z-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="color: var(--color-olive);">
+          <div class="relative z-10 text-center animate-heart flex flex-col items-center justify-center">
+            <!-- Outline heart SVG -->
+            <svg class="w-64 h-64 md:w-80 md:h-80 mb-6 heart-outline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
 
-            <div class="relative z-10 px-8 py-12">
+            <div class="absolute text-center">
               <h3 class="text-3xl md:text-4xl font-bold text-olive mb-2">Meddelande skickat</h3>
               <p class="text-brown text-lg">Tack för att du hör av dig!</p>
             </div>
@@ -113,8 +113,9 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
     animation: heartFloat 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 
-  .animate-heart svg {
-    animation: heartFloat 2.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  .heart-outline {
+    stroke: #7a6b3a;
+    color: #7a6b3a;
   }
 </style>
 
