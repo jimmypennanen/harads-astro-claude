@@ -124,14 +124,40 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' fill='black'/></svg>");
-    mask-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z' fill='black'/></svg>");
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
+    clip-path: polygon(
+      50% 0%,
+      61% 0%,
+      73% 10%,
+      73% 18%,
+      82% 18%,
+      82% 36%,
+      73% 45%,
+      73% 100%,
+      50% 75%,
+      27% 100%,
+      27% 45%,
+      18% 36%,
+      18% 18%,
+      27% 18%,
+      27% 10%
+    );
+    -webkit-clip-path: polygon(
+      50% 0%,
+      61% 0%,
+      73% 10%,
+      73% 18%,
+      82% 18%,
+      82% 36%,
+      73% 45%,
+      73% 100%,
+      50% 75%,
+      27% 100%,
+      27% 45%,
+      18% 36%,
+      18% 18%,
+      27% 18%,
+      27% 10%
+    );
   }
 
   @media (min-width: 768px) {
