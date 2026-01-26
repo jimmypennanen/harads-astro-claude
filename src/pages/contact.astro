@@ -119,65 +119,35 @@ import ImageBannerWide from '../components/ImageBannerWide.astro';
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px;
-    height: 220px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    clip-path: polygon(
-      50% 0%,
-      61% 0%,
-      73% 10%,
-      73% 18%,
-      82% 18%,
-      82% 36%,
-      73% 45%,
-      73% 100%,
-      50% 75%,
-      27% 100%,
-      27% 45%,
-      18% 36%,
-      18% 18%,
-      27% 18%,
-      27% 10%
-    );
-    -webkit-clip-path: polygon(
-      50% 0%,
-      61% 0%,
-      73% 10%,
-      73% 18%,
-      82% 18%,
-      82% 36%,
-      73% 45%,
-      73% 100%,
-      50% 75%,
-      27% 100%,
-      27% 45%,
-      18% 36%,
-      18% 18%,
-      27% 18%,
-      27% 10%
-    );
+    width: 240px;
+    height: 240px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white' opacity='0.15'%3E%3Cpath d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 50%;
   }
 
   @media (min-width: 768px) {
     .heart-blur-window {
-      width: 280px;
-      height: 280px;
+      width: 300px;
+      height: 300px;
     }
   }
 
   @media (min-width: 1024px) {
     .heart-blur-window {
-      width: 320px;
-      height: 320px;
+      width: 360px;
+      height: 360px;
     }
   }
 
-  @supports not (backdrop-filter: blur(10px)) {
+  @supports not (backdrop-filter: blur(12px)) {
     .heart-blur-window {
-      background: rgba(255, 255, 255, 0.4);
-      border: 2px solid rgba(255, 255, 255, 0.3);
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.4);
     }
   }
 </style>
